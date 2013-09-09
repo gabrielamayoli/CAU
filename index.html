@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Manual de instalação da Central de Atendimento ao Usuário - CAU by gabrielamayoli</title>
+    <title>Manual de instalação do CAU by gabrielamayoli</title>
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -17,7 +17,7 @@
   <body>
 
       <header>
-        <h1>Manual de instalação da Central de Atendimento ao Usuário - CAU</h1>
+        <h1>Manual de instalação do CAU</h1>
         <p></p>
       </header>
 
@@ -46,15 +46,181 @@
 
 <p>Você tem a liberdade de:</p>
 
-<p><img src="https://github.com/gabrielamayoli/CAU/blob/master/imagens/.png" alt="">   Compartilhar — copiar, distribuir e transmitir a obra.</p>
+<p><img src="https://raw.github.com/gabrielamayoli/CAU/blob/master/imagens/1.png" alt="">    Compartilhar — copiar, distribuir e transmitir a obra.</p>
 
-<p><img src="https://github.com/gabrielamayoli/CAU/blob/master/imagens/2.png" alt="">   Remixar — criar obras derivadas.</p>
+<p><img src="https://raw.github.com/gabrielamayoli/CAU/blob/master/imagens/2.png" alt="">   Remixar — criar obras derivadas.</p>
 
 <p>Sob as seguintes condições:</p>
 
-<p><img src="https://github.com/gabrielamayoli/CAU/blob/master/imagens/3.png" alt="">   Atribuição — Você deve creditar a obra da forma especificada pelo autor ou licenciante (mas não de maneira que sugira que estes concedem qualquer aval a você ou ao seu uso da obra).</p>
+<p><img src="https://raw.github.com/gabrielamayoli/CAU/blob/master/imagens/3.png" alt="">   Atribuição — Você deve creditar a obra da forma especificada pelo autor ou licenciante (mas não de maneira que sugira que estes concedem qualquer aval a você ou ao seu uso da obra).</p>
 
-<p><img src="https://github.com/gabrielamayoli/CAU/blob/master/imagens/4.png" alt="">   Compartilhamento pela mesma licença — Se você alterar, transformar ou criar em cima desta obra, você poderá distribuir a obra resultante apenas sob a mesma licença, ou sob uma licença similar à presente.</p>
+<p><img src="https://raw.github.com/gabrielamayoli/CAU/blob/master/imagens/4.png" alt="">   Compartilhamento pela mesma licença — Se você alterar, transformar ou criar em cima desta obra, você poderá distribuir a obra resultante apenas sob a mesma licença, ou sob uma licença similar à presente.</p>
+
+<p>Ficando claro que:</p>
+
+<p>Renúncia — Qualquer das condições acima pode ser renunciada se você obtiver permissão do titular dos direitos autorais. 
+Domínio Público — Onde a obra ou qualquer de seus elementos estiver em domínio público sob o direito aplicável, esta condição não é, de maneira alguma, afetada pela licença. 
+Outros Direitos — Os seguintes direitos não são, de maneira alguma, afetados pela licença: 
+Limitações e exceções aos direitos autorais ou quaisquer usos livres aplicáveis; 
+Os direitos morais do autor; 
+Direitos que outras pessoas podem ter sobre a obra ou sobre a utilização da obra, tais como direitos de imagem ou privacidade. 
+Aviso — Para qualquer reutilização ou distribuição, você deve deixar claro a terceiros os termos da licença a que se encontra submetida esta obra. A melhor maneira de fazer isso é com um link para esta página. 
+Introdução ao Sistema CAU
+A instalação do Sistema CAU é um processo bastante simples. O sistema possui duas interfaces de interação: cau e gestaoti. A interface cau é destinada a abertura e acompanhamento de chamados pelos usuários demandantes, já a interface gestaoti é destinada ao atendimento e gerenciamento das demandas e todas as atividades de configuração do sistema. Por este motivo, neste manual várias vezes nos referimos ao termo gestaoti ao invés do nome do sistema – cau. Neste manual utilizaremos o termo sisgestaoti para referenciar a raiz da aplicação, caso queira você pode utilizar outro. </p>
+
+<p>Características e principais funcionalidades</p>
+
+<p>O código fonte (que é livre e aberto) está disponível para ser baixado livremente no Portal do SPB e sua implementação é em PHP, tendo como camada de armazenamento o sistema gerenciador de banco de dados PostgreSQL. </p>
+
+<p>O sistema possui várias funcionalidades entre as quais destacam-se: 
+Gestão de Ativos de TI
+ Sistemas de Informação
+ Servidores
+ Patrimônio
+ Análise de impacto (Gestão de Configuração)
+Gestão de Profissionais de TI e Clientes
+ Cadastro dos profissionais de TI
+ Cadastro de equipes
+ Time sheet
+ Cadastro dos clientes
+Gestão de Chamados a TI
+ Gestão de requisições de serviço
+ Gestão de incidentes
+ Gestão de problemas
+ Gestão de níveis de serviços
+Gestão de Mudanças
+Relatórios de Apoio a Decisão</p>
+
+<p>Instalação do Sistema
+Requisitos gerais para instalação
+Sugerimos que este guia seja executado por um usuário com experiência em configuração básica de Apache, PHP e PostgreSQL.</p>
+
+<p>Este roteiro está baseado no Sistema Operacional GNU/Linux Debian Lenny.</p>
+
+<p>Este manual pressupõe que o servidor de aplicaçãoo Web e o banco de dados estarão instalados no mesmo servidor.</p>
+
+<p>Pré-requisitos de Software
+Os requisitos mínimos de software para a correta instalação do Sistema CAU são:
+PHP 5.x
+php5-gd
+php5-pgsql
+Servidor Web Apache 
+PostgreSQL 8.3 ou superior
+Passo-a-passo da Instalação no Sistema Operacional Linux
+Instalando Apache, PHP5 e PostgreSQL</p>
+
+<p>$ apt-get install apache2
+$ apt-get install postgresql-8.4
+$ apt-get install php5 libapache2-mod-php5 php5-gd php5-pgsql</p>
+
+<p>Download do software
+Faça o download dos arquivos do sistema antes de prosseguir. A versão atual, 1.0, está disponível em pacotes ZIP e GZip. Descompacte o pacote de sua preferência no diretório raiz do seu servidor web Apache (no Debian, geralmente o diretório raiz é /var/www). </p>
+
+<pre><code>$ cd /var/www
+  $ unzip /caminho/cau-1.0.zip
+$ mv cau-1.0  sisgestaoti
+</code></pre>
+
+<p>Criação do Banco de Dados
+Crie o banco de dados ao qual o CAU usará para armazenar todos os dados digitados através da interface web. Os passos descritos nessa seção irão criar: </p>
+
+<p>Um usuário gestaoti no servidor PostgreSQL com a senha de acesso 'gestaoti'; 
+Um banco de dados gestaoti. 
+Observação: você pode usar o nome de usuário, banco de dados e senha que desejar. Esses são apenas nomes padrões que a aplicação usa para conectar-se ao banco. 
+Faça login no servidor de banco de dados PostgreSQL com o cliente psql: 
+    $ su
+    # su - postgres
+    # psql
+Alternativamente, com o sudo: </p>
+
+<pre><code>$ sudo -u postgres psql
+</code></pre>
+
+<p>Crie o usuário de banco de dados que será utilizado pelo CAU: </p>
+
+<pre><code>postgres=# CREATE ROLE gestaoti;
+postgres=# ALTER ROLE gestaoti WITH SUPERUSER INHERIT NOCREATEROLE      CREATEDB LOGIN PASSWORD 'gestaoti';
+</code></pre>
+
+<p>Crie o banco de dados: </p>
+
+<pre><code>postgres=# CREATE DATABASE gestaoti WITH TEMPLATE = template0 ENCODING = 'UTF8' LC_COLLATE = 'pt_BR.utf8' LC_CTYPE = 'pt_BR.utf8'; 
+postgres=# ALTER DATABASE gestaoti OWNER TO gestaoti;
+postgres=# \q
+</code></pre>
+
+<p>Execute o arquivo script_gestaoti.sql que vem no cau. O diretório em que esse arquivo reside é o install. </p>
+
+<pre><code>$ sudo -u postgres psql -d gestaoti -f /var/www/sisgestaoti/install/script_gestaoti.sql
+</code></pre>
+
+<p>Edite o arquivo de configuração e conceda permissões de escrita
+O CAU armazena algumas configurações necessárias para a aplicação em um arquivo chamado gestaoti_configs.inc.php (em /var/www/sisgestaoti/gestaoti/), que possui uma sintaxe bem simples de entender. Caso tenha criado o banco de dados, nome de usuário ou senha com um valor diferente de gestaoti, basta editar esse arquivo para que corresponda as suas escolhas: </p>
+
+<pre><code>$gestaoti_settings['db_postgres_host']='localhost'; 
+$gestaoti_settings['db_postgres_port']='5432'; 
+$gestaoti_settings['db_postgres_name']='gestaoti'; 
+$gestaoti_settings['db_postgres_user']='gestaoti'; 
+$gestaoti_settings['db_postgres_pass']='gestaoti'; 
+$gestaoti_settings['db_postgres_enconding']='LATIN1';
+</code></pre>
+
+<p>Depois, conceda permissões de escrita no diretório cau/anexos. Uma forma prática é dar permissão de escrita para o usuário dono do diretório e para usuários de um grupo. Nesse caso, mudaremos o grupo desses diretórios para o grupo do usuário Apache. </p>
+
+<pre><code># chmod -R 775 /var/www/sisgestaoti/cau/anexos
+# chown -R www-data.www-data /var/www/sisgestaoti/
+</code></pre>
+
+<p>Observação: www-data é o nome do grupo Apache padrão em sistemas Debian. Em outros sistemas, esse nome pode ser httpd, apache ou _<a href="http://www">www</a>. Substitua de acordo com o usado em seu sistema operacional. 
+Edite o arquivo de configuração da biblioteca JpGraph
+Configure o diretório onde estão instaladas as fontes. Edite o arquivo jpg-config.inc.php em /var/www/sisgestaoti/gestaoti/include/PHP/class. Por padrão o sistema CAU utiliza a fonte arial.ttf basta incluí-la no diretório abaixo (no caso para sistemas Debian). Esta fonte está incluída no pacote ttf-mscorefonts-installer da distribuição Debian Lenny.
+    DEFINE("TTF_DIR","/usr/X11R6/lib/X11/fonts/truetype/");
+Configurando o PHP
+Edite o arquivo php.ini da seguinte forma: </p>
+
+<p>register_globals: altere para On
+    register_globals = on</p>
+
+<p>Para instalações nos sistemas operacionais windows* os usuários reportaram  também a necessidade de alterar a diretira short_open_tag, mudar de “Off” para:
+    short_open_tag = on</p>
+
+<p>Observação: a localização do arquivo php.ini é diferente entre os sistemas operacionais. No Debian/Ubuntu, o padrão é /etc/php5/apache2/php.ini. 
+Após qualquer alteração no arquivo php.ini, reinicie seu servidor web: 
+    # /etc/init.d/apache2 restart
+Configuração do Servidor Web – (Passo Opcional)
+Agora criaremos um virtual host no servidor. Crie um novo arquivo em /etc/apache2/sites-available/ chamado sisgestaoti.local com o seguinte conteúdo:</p>
+
+<p>
+  ServerName sisgestaoti.local
+  DocumentRoot /var/www/sisgestaoti/</p>
+
+<p>
+    AllowOverride all
+    Order deny,allow
+    Allow from all
+  
+Edite o arquivo /etc/hosts (no Windows esse arquivo fica em C:\WINDOWS\system32\drivers\etc\hosts) e adicione a seguinte linha: </p>
+
+<pre><code>127.0.0.1      sisgestaoti.local
+</code></pre>
+
+<p>Habilite o Virtual Host: </p>
+
+<pre><code># a2ensite sisgestaoti.local
+</code></pre>
+
+<p>Reinicie o servidor Apache: </p>
+
+<pre><code># /etc/init.d/apache2 restart
+</code></pre>
+
+<p>Pronto. Agora, acesse o endereço <a href="http://sisgestaoti.local">http://sisgestaoti.local</a> em seu navegador. </p>
+
+<p>Acessando  a aplicação
+Abra o navegador de sua preferência e acesse o endereço  http://localhost/sisgestaoti ou  <a href="http://sisgestaoti.local">http://sisgestaoti.local</a> (caso tenha configurado um Virtual Host). Faça o login na aplicação utilizando o usuário administrador. O login e senha para acesso são admin e admin, respectivamente. </p>
+
+<p>Link da Licença Júridica Creative Commons
+<a href="http://creativecommons.org/licenses/by-sa/2.5/br/legalcode">http://creativecommons.org/licenses/by-sa/2.5/br/legalcode</a></p>
       </section>
       <footer>
         <p>Project maintained by <a href="https://github.com/gabrielamayoli">gabrielamayoli</a></p>
