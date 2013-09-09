@@ -64,57 +64,104 @@ Os direitos morais do autor;
 Direitos que outras pessoas podem ter sobre a obra ou sobre a utilização da obra, tais como direitos de imagem ou privacidade. 
 <b>Aviso</b> — Para qualquer reutilização ou distribuição, você deve deixar claro a terceiros os termos da licença a que se encontra submetida esta obra. A melhor maneira de fazer isso é com um link para esta página. </p>
 
-<p>2 - Introdução ao Sistema CAU</p>
+<h2>
+<a name="2---introdu%C3%A7%C3%A3o-ao-sistema-cau" class="anchor" href="#2---introdu%C3%A7%C3%A3o-ao-sistema-cau"><span class="octicon octicon-link"></span></a>2 - Introdução ao Sistema CAU</h2>
 
 <p>A instalação do Sistema CAU é um processo bastante simples. O sistema possui duas interfaces de interação: cau e gestaoti. A interface cau é destinada a abertura e acompanhamento de chamados pelos usuários demandantes, já a interface gestaoti é destinada ao atendimento e gerenciamento das demandas e todas as atividades de configuração do sistema. Por este motivo, neste manual várias vezes nos referimos ao termo gestaoti ao invés do nome do sistema – cau. Neste manual utilizaremos o termo sisgestaoti para referenciar a raiz da aplicação, caso queira você pode utilizar outro. </p>
 
-<p>2.1 - Características e principais funcionalidades</p>
+<h2>
+<a name="21---caracter%C3%ADsticas-e-principais-funcionalidades" class="anchor" href="#21---caracter%C3%ADsticas-e-principais-funcionalidades"><span class="octicon octicon-link"></span></a>2.1 - Características e principais funcionalidades</h2>
 
 <p>O código fonte (que é livre e aberto) está disponível para ser baixado livremente no Portal do SPB e sua implementação é em PHP, tendo como camada de armazenamento o sistema gerenciador de banco de dados PostgreSQL. </p>
 
-<p>O sistema possui várias funcionalidades entre as quais destacam-se: 
-Gestão de Ativos de TI
- Sistemas de Informação
- Servidores
- Patrimônio
- Análise de impacto (Gestão de Configuração)
-Gestão de Profissionais de TI e Clientes
- Cadastro dos profissionais de TI
- Cadastro de equipes
- Time sheet
- Cadastro dos clientes
-Gestão de Chamados a TI
- Gestão de requisições de serviço
- Gestão de incidentes
- Gestão de problemas
- Gestão de níveis de serviços
-Gestão de Mudanças
-Relatórios de Apoio a Decisão</p>
+<p>O sistema possui várias funcionalidades entre as quais destacam-se: </p>
 
-<p>3 - Instalação do Sistema
-Requisitos gerais para instalação
-Sugerimos que este guia seja executado por um usuário com experiência em configuração básica de Apache, PHP e PostgreSQL.</p>
+<ul>
+<li>
+<p>Gestão de Ativos de TI <br></p>
+
+<ul>
+<li>Sistemas de Informação; <br>
+</li>
+<li>Servidores; <br>
+</li>
+<li>Patrimônio; <br>
+</li>
+<li>Análise de impacto (Gestão de Configuração); <br>
+</li>
+</ul>
+</li>
+<li>
+<p>Gestão de Profissionais de TI e Clientes <br></p>
+
+<ul>
+<li>Cadastro dos profissionais de TI; <br>
+</li>
+<li>Cadastro de equipes; <br>
+</li>
+<li>Time sheet; <br>
+-Cadastro dos clientes; <br>
+</li>
+</ul>
+</li>
+<li>
+<p>Gestão de Chamados a TI <br></p>
+
+<ul>
+<li>Gestão de requisições de serviço; <br>
+</li>
+<li>Gestão de incidentes; <br>
+</li>
+<li>Gestão de problemas; <br>
+</li>
+<li>Gestão de níveis de serviços; <br>
+</li>
+</ul>
+</li>
+<li>
+<p>Gestão de Mudanças <br></p>
+
+<ul>
+<li>Relatórios de Apoio a Decisão; <br>
+</li>
+</ul>
+</li>
+</ul><h2>
+<a name="3---instala%C3%A7%C3%A3o-do-sistema" class="anchor" href="#3---instala%C3%A7%C3%A3o-do-sistema"><span class="octicon octicon-link"></span></a>3 - Instalação do Sistema</h2>
+
+<h2>
+<a name="31---requisitos-gerais-para-instala%C3%A7%C3%A3o" class="anchor" href="#31---requisitos-gerais-para-instala%C3%A7%C3%A3o"><span class="octicon octicon-link"></span></a>3.1 - Requisitos gerais para instalação</h2>
+
+<p>Sugerimos que este guia seja executado por um usuário com experiência em configuração básica de Apache, PHP e PostgreSQL.</p>
 
 <p>Este roteiro está baseado no Sistema Operacional GNU/Linux Debian Lenny.</p>
 
 <p>Este manual pressupõe que o servidor de aplicaçãoo Web e o banco de dados estarão instalados no mesmo servidor.</p>
 
-<p>Pré-requisitos de Software
-Os requisitos mínimos de software para a correta instalação do Sistema CAU são:
-PHP 5.x
-php5-gd
-php5-pgsql
-Servidor Web Apache 
-PostgreSQL 8.3 ou superior
-Passo-a-passo da Instalação no Sistema Operacional Linux
-Instalando Apache, PHP5 e PostgreSQL</p>
+<h2>
+<a name="32---pr%C3%A9-requisitos-de-software" class="anchor" href="#32---pr%C3%A9-requisitos-de-software"><span class="octicon octicon-link"></span></a>3.2 - Pré-requisitos de Software</h2>
+
+<p>Os requisitos mínimos de software para a correta instalação do Sistema CAU são:</p>
+
+<ul>
+<li>PHP 5.x</li>
+<li>php5-gd</li>
+<li>php5-pgsql</li>
+<li>Servidor Web Apache </li>
+<li>PostgreSQL 8.3 ou superior</li>
+</ul><h2>
+<a name="33-passo-a-passo-da-instala%C3%A7%C3%A3o-no-sistema-operacional-linux" class="anchor" href="#33-passo-a-passo-da-instala%C3%A7%C3%A3o-no-sistema-operacional-linux"><span class="octicon octicon-link"></span></a>3.3 Passo-a-passo da Instalação no Sistema Operacional Linux</h2>
+
+<h2>
+<a name="instalando-apache-php5-e-postgresql" class="anchor" href="#instalando-apache-php5-e-postgresql"><span class="octicon octicon-link"></span></a>Instalando Apache, PHP5 e PostgreSQL</h2>
 
 <p>$ apt-get install apache2
 $ apt-get install postgresql-8.4
 $ apt-get install php5 libapache2-mod-php5 php5-gd php5-pgsql</p>
 
-<p>Download do software
-Faça o download dos arquivos do sistema antes de prosseguir. A versão atual, 1.0, está disponível em pacotes ZIP e GZip. Descompacte o pacote de sua preferência no diretório raiz do seu servidor web Apache (no Debian, geralmente o diretório raiz é /var/www). </p>
+<p>Download do software</p>
+
+<p>Faça o download dos arquivos do sistema antes de prosseguir. A versão atual, 1.0, está disponível em pacotes ZIP e GZip. Descompacte o pacote de sua preferência no diretório raiz do seu servidor web Apache (no Debian, geralmente o diretório raiz é /var/www). </p>
 
 <pre><code>$ cd /var/www
   $ unzip /caminho/cau-1.0.zip
