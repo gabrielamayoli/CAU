@@ -14,7 +14,7 @@ Sob as seguintes condições:
 
 ![](https://raw.github.com/gabrielamayoli/CAU/master/imagens/4.png) &nbsp; Compartilhamento pela mesma licença — Se você alterar, transformar ou criar em cima desta obra, você poderá distribuir a obra resultante apenas sob a mesma licença, ou sob uma licença similar à presente.
 
-Ficando claro que: <b>Renúncia</b> — Qualquer das condições acima pode ser <font color="blue"><u>renunciada</u></font> se você obtiver permissão do titular dos direitos autorais. 
+Ficando claro que: <b>Renúncia</b> — Qualquer das condições acima pode ser <u>renunciada</u> se você obtiver permissão do titular dos direitos autorais. 
 <b>Domínio Público</b> — Onde a obra ou qualquer de seus elementos estiver em domínio público sob o direito aplicável, esta condição não é, de maneira alguma, afetada pela licença. 
 <b>Outros Direitos</b> — Os seguintes direitos não são, de maneira alguma, afetados pela licença: 
 Limitações e exceções aos direitos autorais ou quaisquer usos livres aplicáveis; 
