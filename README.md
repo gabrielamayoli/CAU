@@ -23,61 +23,67 @@ Direitos que outras pessoas podem ter sobre a obra ou sobre a utilização da ob
 <b>Aviso</b> — Para qualquer reutilização ou distribuição, você deve deixar claro a terceiros os termos da licença a que se encontra submetida esta obra. A melhor maneira de fazer isso é com um link para esta página. 
 
 
-2 - Introdução ao Sistema CAU
+##2 - Introdução ao Sistema CAU
 
 A instalação do Sistema CAU é um processo bastante simples. O sistema possui duas interfaces de interação: cau e gestaoti. A interface cau é destinada a abertura e acompanhamento de chamados pelos usuários demandantes, já a interface gestaoti é destinada ao atendimento e gerenciamento das demandas e todas as atividades de configuração do sistema. Por este motivo, neste manual várias vezes nos referimos ao termo gestaoti ao invés do nome do sistema – cau. Neste manual utilizaremos o termo sisgestaoti para referenciar a raiz da aplicação, caso queira você pode utilizar outro. 
 
-2.1 - Características e principais funcionalidades
+##2.1 - Características e principais funcionalidades
 
 O código fonte (que é livre e aberto) está disponível para ser baixado livremente no Portal do SPB e sua implementação é em PHP, tendo como camada de armazenamento o sistema gerenciador de banco de dados PostgreSQL. 
 
 O sistema possui várias funcionalidades entre as quais destacam-se: 
 
 * Gestão de Ativos de TI <br>
-    Sistemas de Informação; <br>
-    Servidores; <br>
-    Patrimônio; <br>
-    Análise de impacto (Gestão de Configuração); <br>
+   - Sistemas de Informação; <br>
+   - Servidores; <br>
+   - Patrimônio; <br>
+   - Análise de impacto (Gestão de Configuração); <br>
  
 * Gestão de Profissionais de TI e Clientes <br>
-    Cadastro dos profissionais de TI; <br>
-    Cadastro de equipes; <br>
-    Time sheet; <br>
-    Cadastro dos clientes; <br>
+   - Cadastro dos profissionais de TI; <br>
+   - Cadastro de equipes; <br>
+   - Time sheet; <br>
+    -Cadastro dos clientes; <br>
  
 * Gestão de Chamados a TI <br>
-    Gestão de requisições de serviço; <br>
-    Gestão de incidentes; <br>
-    Gestão de problemas; <br>
-    Gestão de níveis de serviços; <br>
+   - Gestão de requisições de serviço; <br>
+   - Gestão de incidentes; <br>
+   - Gestão de problemas; <br>
+   - Gestão de níveis de serviços; <br>
  
 * Gestão de Mudanças <br>
-   Relatórios de Apoio a Decisão; <br>
+   - Relatórios de Apoio a Decisão; <br>
 
 
-3 - Instalação do Sistema
-Requisitos gerais para instalação
+##3 - Instalação do Sistema
+
+##3.1 - Requisitos gerais para instalação
+
 Sugerimos que este guia seja executado por um usuário com experiência em configuração básica de Apache, PHP e PostgreSQL.
 
 Este roteiro está baseado no Sistema Operacional GNU/Linux Debian Lenny.
 
 Este manual pressupõe que o servidor de aplicaçãoo Web e o banco de dados estarão instalados no mesmo servidor.
 
-Pré-requisitos de Software
+##3.2 - Pré-requisitos de Software
+
 Os requisitos mínimos de software para a correta instalação do Sistema CAU são:
-PHP 5.x
-php5-gd
-php5-pgsql
-Servidor Web Apache 
-PostgreSQL 8.3 ou superior
-Passo-a-passo da Instalação no Sistema Operacional Linux
-Instalando Apache, PHP5 e PostgreSQL
+ * PHP 5.x
+ * php5-gd
+ * php5-pgsql
+ * Servidor Web Apache 
+ * PostgreSQL 8.3 ou superior
+ 
+##3.3 Passo-a-passo da Instalação no Sistema Operacional Linux
+
+##Instalando Apache, PHP5 e PostgreSQL
 
 $ apt-get install apache2
 $ apt-get install postgresql-8.4
 $ apt-get install php5 libapache2-mod-php5 php5-gd php5-pgsql
  
 Download do software
+
 Faça o download dos arquivos do sistema antes de prosseguir. A versão atual, 1.0, está disponível em pacotes ZIP e GZip. Descompacte o pacote de sua preferência no diretório raiz do seu servidor web Apache (no Debian, geralmente o diretório raiz é /var/www). 
 
 	$ cd /var/www
