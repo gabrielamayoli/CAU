@@ -33,26 +33,26 @@ O código fonte (que é livre e aberto) está disponível para ser baixado livre
 
 O sistema possui várias funcionalidades entre as quais destacam-se: 
 
-* Gestão de Ativos de TI
-    Sistemas de Informação;
-    Servidores;
-    Patrimônio;
-    Análise de impacto (Gestão de Configuração);
+* Gestão de Ativos de TI &nbsp;
+    Sistemas de Informação; &nbsp;
+    Servidores; &nbsp;
+    Patrimônio; &nbsp;
+    Análise de impacto (Gestão de Configuração); &nbsp;
  
-* Gestão de Profissionais de TI e Clientes
-    Cadastro dos profissionais de TI;
-    Cadastro de equipes;
-    Time sheet;
-    Cadastro dos clientes;
+* Gestão de Profissionais de TI e Clientes &nbsp;
+    Cadastro dos profissionais de TI; &nbsp;
+    Cadastro de equipes; &nbsp;
+    Time sheet; &nbsp;
+    Cadastro dos clientes; &nbsp;
  
-* Gestão de Chamados a TI
-    Gestão de requisições de serviço;
-    Gestão de incidentes;
-    Gestão de problemas;
-    Gestão de níveis de serviços;
+* Gestão de Chamados a TI &nbsp;
+    Gestão de requisições de serviço; &nbsp;
+    Gestão de incidentes; &nbsp;
+    Gestão de problemas; &nbsp;
+    Gestão de níveis de serviços; &nbsp;
  
-* Gestão de Mudanças
-   Relatórios de Apoio a Decisão;
+* Gestão de Mudanças nbsp;
+   Relatórios de Apoio a Decisão; &nbsp;
 
 
 3 - Instalação do Sistema
