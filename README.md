@@ -4,7 +4,9 @@ Para a utilização deste documento é necessário seguir as regras da licença 
 
 Você tem a liberdade de:
 
-![](https://raw.github.com/gabrielamayoli/CAU/blob/master/imagens/.png) &nbsp; Compartilhar — copiar, distribuir e transmitir a obra.
+![](https://raw.github.com/gabrielamayoli/CAU/blob/master/imagens/.png) &nbsp; 
+
+Compartilhar — copiar, distribuir e transmitir a obra.
 
 ![](https://raw.github.com/gabrielamayoli/CAU/blob/master/imagens/2.png) &nbsp; Remixar — criar obras derivadas.
 
