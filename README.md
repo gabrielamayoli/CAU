@@ -32,23 +32,27 @@ A instalação do Sistema CAU é um processo bastante simples. O sistema possui 
 O código fonte (que é livre e aberto) está disponível para ser baixado livremente no Portal do SPB e sua implementação é em PHP, tendo como camada de armazenamento o sistema gerenciador de banco de dados PostgreSQL. 
 
 O sistema possui várias funcionalidades entre as quais destacam-se: 
-Gestão de Ativos de TI
- Sistemas de Informação
- Servidores
- Patrimônio
- Análise de impacto (Gestão de Configuração)
-Gestão de Profissionais de TI e Clientes
- Cadastro dos profissionais de TI
- Cadastro de equipes
- Time sheet
- Cadastro dos clientes
-Gestão de Chamados a TI
- Gestão de requisições de serviço
- Gestão de incidentes
- Gestão de problemas
- Gestão de níveis de serviços
-Gestão de Mudanças
-Relatórios de Apoio a Decisão
+
+* Gestão de Ativos de TI
+    Sistemas de Informação
+    Servidores
+    Patrimônio
+    Análise de impacto (Gestão de Configuração)
+ 
+* Gestão de Profissionais de TI e Clientes
+    Cadastro dos profissionais de TI
+    Cadastro de equipes
+    Time sheet
+    Cadastro dos clientes
+ 
+* Gestão de Chamados a TI
+    Gestão de requisições de serviço
+    Gestão de incidentes
+    Gestão de problemas
+    Gestão de níveis de serviços
+ 
+*Gestão de Mudanças
+   Relatórios de Apoio a Decisão
 
 
 3 - Instalação do Sistema
