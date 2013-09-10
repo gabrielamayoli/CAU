@@ -91,8 +91,8 @@ Faça o download dos arquivos do sistema antes de prosseguir. A versão atual, [
 
 Crie o banco de dados ao qual o CAU usará para armazenar todos os dados digitados através da interface web. Os passos descritos nessa seção irão criar:
    
-   * Um usuário <b>gestaoti</b> no servidor PostgreSQL com a senha de acesso <b>'gestaoti'</b>; 
-   * Um banco de dados <b>gestaoti</b>.
+   *Um usuário <b>gestaoti</b> no servidor PostgreSQL com a senha de acesso <b>'gestaoti'</b>; 
+   *Um banco de dados <b>gestaoti</b>.
    
 <b>Observação:</b> você pode usar o nome de usuário, banco de dados e senha que desejar. Esses são apenas nomes padrões que a aplicação usa para conectar-se ao banco. 
 Faça login no servidor de banco de dados PostgreSQL com o cliente <i>psql</i>: 
