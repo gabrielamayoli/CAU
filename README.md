@@ -4,15 +4,15 @@ Para a utilização deste documento é necessário seguir as regras da licença 
 
 Você tem a liberdade de:
 
-![](https://raw.github.com/gabrielamayoli/CAU/master/imagens/1.png) &nbsp;  Compartilhar — copiar, distribuir e transmitir a obra.
+![](https://raw.github.com/gabrielamayoli/CAU/master/imagens/1.png) &nbsp;Compartilhar — copiar, distribuir e transmitir a obra.
 
-![](https://raw.github.com/gabrielamayoli/CAU/master/imagens/2.png) &nbsp; Remixar — criar obras derivadas.
+![](https://raw.github.com/gabrielamayoli/CAU/master/imagens/2.png) &nbsp;Remixar — criar obras derivadas.
 
 Sob as seguintes condições:
 
-![](https://raw.github.com/gabrielamayoli/CAU/master/imagens/3.png) &nbsp; Atribuição — Você deve creditar a obra da forma especificada pelo autor ou licenciante (mas não de maneira que sugira que estes concedem qualquer aval a você ou ao seu uso da obra).
+![](https://raw.github.com/gabrielamayoli/CAU/master/imagens/3.png) &nbsp;Atribuição — Você deve creditar a obra da forma especificada pelo autor ou licenciante (mas não de maneira que sugira que estes concedem qualquer aval a você ou ao seu uso da obra).
 
-![](https://raw.github.com/gabrielamayoli/CAU/master/imagens/4.png) &nbsp; Compartilhamento pela mesma licença — Se você alterar, transformar ou criar em cima desta obra, você poderá distribuir a obra resultante apenas sob a mesma licença, ou sob uma licença similar à presente.
+![](https://raw.github.com/gabrielamayoli/CAU/master/imagens/4.png) &nbsp;Compartilhamento pela mesma licença — Se você alterar, transformar ou criar em cima desta obra, você poderá distribuir a obra resultante apenas sob a mesma licença, ou sob uma licença similar à presente.
 
 Ficando claro que: <b>Renúncia</b> — Qualquer das condições acima pode ser [renunciada](http://creativecommons.org/licenses/by-nc-sa/2.5/br/deed.pt_BR#) se você obtiver permissão do titular dos direitos autorais. 
 <b>Domínio Público</b> — Onde a obra ou qualquer de seus elementos estiver em [domínio público](http://wiki.creativecommons.org/Public_domain) sob o direito aplicável, esta condição não é, de maneira alguma, afetada pela licença. 
@@ -33,36 +33,33 @@ O código fonte (que é livre e aberto) está disponível para ser baixado livre
 
 O sistema possui várias funcionalidades entre as quais destacam-se: 
 
-* Gestão de Ativos de TI <br>
+* Gestão de Ativos de TI 
    - Sistemas de Informação; <br>
    - Servidores; <br>
    - Patrimônio; <br>
    - Análise de impacto (Gestão de Configuração); <br>
  
-* Gestão de Profissionais de TI e Clientes <br>
+* Gestão de Profissionais de TI e Clientes 
    - Cadastro dos profissionais de TI; <br>
    - Cadastro de equipes; <br>
    - Time sheet; <br>
     -Cadastro dos clientes; <br>
  
-* Gestão de Chamados a TI <br>
+* Gestão de Chamados a TI 
    - Gestão de requisições de serviço; <br>
    - Gestão de incidentes; <br>
    - Gestão de problemas; <br>
    - Gestão de níveis de serviços; <br>
  
-* Gestão de Mudanças <br>
+* Gestão de Mudanças 
    - Relatórios de Apoio a Decisão;
-
 
 ##3 - Instalação do Sistema
 
 ##3.1 - Requisitos gerais para instalação
 
 Sugerimos que este guia seja executado por um usuário com experiência em configuração básica de Apache, PHP e PostgreSQL.
-
 Este roteiro está baseado no Sistema Operacional GNU/Linux Debian Lenny.
-
 Este manual pressupõe que o servidor de aplicaçãoo Web e o banco de dados estarão instalados no mesmo servidor.
 
 ##3.2 - Pré-requisitos de Software
