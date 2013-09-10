@@ -33,33 +33,29 @@ O código fonte (que é livre e aberto) está disponível para ser baixado livre
 
 O sistema possui várias funcionalidades entre as quais destacam-se: 
 
-* Gestão de Ativos de TI
-   - Sistemas de Informação;
+* Gestão de Ativos de TI - Sistemas de Informação;
    - Servidores;
    - Patrimônio;
    - Análise de impacto (Gestão de Configuração);
  
-* Gestão de Profissionais de TI e Clientes
-   - Cadastro dos profissionais de TI;
+* Gestão de Profissionais de TI e Clientes - Cadastro dos profissionais de TI;
    - Cadastro de equipes;
    - Time sheet;
-    -Cadastro dos clientes;
+   -Cadastro dos clientes;
  
-* Gestão de Chamados a TI 
-   - Gestão de requisições de serviço;
+* Gestão de Chamados a TI - Gestão de requisições de serviço;
    - Gestão de incidentes;
    - Gestão de problemas;
    - Gestão de níveis de serviços;
  
-* Gestão de Mudanças
-   - Relatórios de Apoio a Decisão;
+* Gestão de Mudanças - Relatórios de Apoio a Decisão;
 
 ##3 - Instalação do Sistema
 
 ##3.1 - Requisitos gerais para instalação
 
-Sugerimos que este guia seja executado por um usuário com experiência em configuração básica de Apache, PHP e PostgreSQL.
-Este roteiro está baseado no Sistema Operacional GNU/Linux Debian Lenny.
+Sugerimos que este guia seja executado por um usuário com experiência em configuração básica de Apache, PHP e PostgreSQL.<br>
+Este roteiro está baseado no Sistema Operacional GNU/Linux Debian Lenny.<br>
 Este manual pressupõe que o servidor de aplicação Web e o banco de dados estarão instalados no mesmo servidor.
 
 ##3.2 - Pré-requisitos de Software
@@ -67,8 +63,7 @@ Este manual pressupõe que o servidor de aplicação Web e o banco de dados esta
 Os requisitos mínimos de software para a correta instalação do Sistema CAU são:
  * PHP 5.x
       * php5-gd
-      * php5-pgsql
- * Servidor Web Apache 
+      * php5-pgsql * Servidor Web Apache 
  * PostgreSQL 8.3 ou superior
  
 ##4 - Passo-a-passo da Instalação no Sistema Operacional Linux
@@ -84,7 +79,7 @@ Os requisitos mínimos de software para a correta instalação do Sistema CAU s�
 Faça o download dos arquivos do sistema antes de prosseguir. A versão atual, [1.0](http://www.softwarepublico.gov.br/dotlrn/clubs/ieducar/file-storage/index?folder_id=18853558), está disponível em pacotes ZIP e GZip. Descompacte o pacote de sua preferência no diretório raiz do seu servidor web Apache (no Debian, geralmente o diretório raiz é <i>/var/www</i>). 
 
 	$ cd /var/www
-        $ unzip /caminho/cau-1.0.zip
+	$ unzip /caminho/cau-1.0.zip
 	$ mv cau-1.0  sisgestaoti
 	
 ##4.3 - Criação do Banco de Dados
@@ -92,7 +87,7 @@ Faça o download dos arquivos do sistema antes de prosseguir. A versão atual, [
 Crie o banco de dados ao qual o CAU usará para armazenar todos os dados digitados através da interface web. Os passos descritos nessa seção irão criar: 
 
 Um usuário <b>gestaoti</b> no servidor PostgreSQL com a senha de acesso <b>'gestaoti'</b>; 
-Um banco de dados <b>gestaoti</b>. 
+Um banco de dados <b>gestaoti</b>.<br>
 <b>Observação:</b> você pode usar o nome de usuário, banco de dados e senha que desejar. Esses são apenas nomes padrões que a aplicação usa para conectar-se ao banco. 
 Faça login no servidor de banco de dados PostgreSQL com o cliente <i>psql</i>: 
 
@@ -133,11 +128,12 @@ Depois, conceda permissões de escrita no diretório cau/anexos. Uma forma prát
 	# chmod -R 775 /var/www/sisgestaoti/cau/anexos
 	# chown -R www-data.www-data /var/www/sisgestaoti/
 
-<b>Observação:</b> <i>www-data</i> é o nome do grupo Apache padrão em sistemas Debian. Em outros sistemas, esse nome pode ser <i>httpd</i>, apache ou <i>_www.</i> Substitua de acordo com o usado em seu sistema operacional. 
+<b>Observação:</b> <i>www-data</i> é o nome do grupo Apache padrão em sistemas Debian. Em outros sistemas, esse nome pode ser <i>httpd</i>, apache ou <i>_www</i>. Substitua de acordo com o usado em seu sistema operacional. 
 
 <b><i>Edite o arquivo de configuração da biblioteca JpGraph</i></b>
 
 Configure o diretório onde estão instaladas as fontes. Edite o arquivo <b>jpg-config.inc.php</b> em <i>/var/www/sisgestaoti/gestaoti/include/PHP/class</i>. Por padrão o sistema CAU utiliza a fonte <i>arial.ttf</i> basta incluí-la no diretório abaixo (no caso para sistemas Debian). Esta fonte está incluída no pacote <i>ttf-mscorefonts-installer</i> da distribuição Debian Lenny.
+	
 	DEFINE("TTF_DIR","/usr/X11R6/lib/X11/fonts/truetype/");
 	
 ##4.4 - Configurando o PHP
