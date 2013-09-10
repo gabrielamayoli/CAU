@@ -189,5 +189,5 @@ Pronto. Agora, acesse o endereço [http://sisgestaoti.local](http://ieducar.loca
 Abra o navegador de sua preferência e acesse o endereço  [http://localhost/sisgestaoti](http://localhost/ieducar) ou  [http://sisgestaoti.local](http://ieducar.local/) (caso tenha configurado um Virtual Host). Faça o login na aplicação utilizando o usuário administrador. O login e senha para acesso são <b>admin</b> e <b>admin</b>, respectivamente. 
 
 
-<b>Link da Licença Júridica Creative Commons</b>
+<b>Link da Licença Júridica Creative Commons</b><br>
 <i>http://creativecommons.org/licenses/by-sa/2.5/br/legalcode</b>
