@@ -14,12 +14,12 @@ Sob as seguintes condições:
 
 ![](https://raw.github.com/gabrielamayoli/CAU/master/imagens/4.png) &nbsp; Compartilhamento pela mesma licença — Se você alterar, transformar ou criar em cima desta obra, você poderá distribuir a obra resultante apenas sob a mesma licença, ou sob uma licença similar à presente.
 
-Ficando claro que: <b>Renúncia</b> — Qualquer das condições acima pode ser <u>renunciada</u> se você obtiver permissão do titular dos direitos autorais. 
-<b>Domínio Público</b> — Onde a obra ou qualquer de seus elementos estiver em domínio público sob o direito aplicável, esta condição não é, de maneira alguma, afetada pela licença. 
+Ficando claro que: <b>Renúncia</b> — Qualquer das condições acima pode ser [renunciada](http://creativecommons.org/licenses/by-nc-sa/2.5/br/deed.pt_BR#) se você obtiver permissão do titular dos direitos autorais. 
+<b>Domínio Público</b> — Onde a obra ou qualquer de seus elementos estiver em [domínio público](http://wiki.creativecommons.org/Public_domain) sob o direito aplicável, esta condição não é, de maneira alguma, afetada pela licença. 
 <b>Outros Direitos</b> — Os seguintes direitos não são, de maneira alguma, afetados pela licença: 
-Limitações e exceções aos direitos autorais ou quaisquer usos livres aplicáveis; 
-Os direitos morais do autor; 
-Direitos que outras pessoas podem ter sobre a obra ou sobre a utilização da obra, tais como direitos de imagem ou privacidade. 
+Limitações e exceções aos direitos autorais ou quaisquer [usos livres](http://wiki.creativecommons.org/Frequently_Asked_Questions#Do_Creative_Commons_licenses_affect_fair_use.2C_fair_dealing_or_other_exceptions_to_copyright.3F) aplicáveis; 
+Os [direitos morais](http://wiki.creativecommons.org/Frequently_Asked_Questions#I_don.E2.80.99t_like_the_way_a_person_has_used_my_work_in_a_derivative_work_or_included_it_in_a_collective_work.3B_what_can_I_do.3F) do autor; 
+Direitos que outras pessoas podem ter sobre a obra ou sobre a utilização da obra, tais como [direitos de imagem](http://wiki.creativecommons.org/Frequently_Asked_Questions#When_are_publicity_rights_relevant.3F) ou privacidade. 
 <b>Aviso</b> — Para qualquer reutilização ou distribuição, você deve deixar claro a terceiros os termos da licença a que se encontra submetida esta obra. A melhor maneira de fazer isso é com um link para esta página. 
 
 
@@ -52,7 +52,7 @@ O sistema possui várias funcionalidades entre as quais destacam-se:
    - Gestão de níveis de serviços; <br>
  
 * Gestão de Mudanças <br>
-   - Relatórios de Apoio a Decisão; <br>
+   - Relatórios de Apoio a Decisão;
 
 
 ##3 - Instalação do Sistema
@@ -69,32 +69,34 @@ Este manual pressupõe que o servidor de aplicaçãoo Web e o banco de dados est
 
 Os requisitos mínimos de software para a correta instalação do Sistema CAU são:
  * PHP 5.x
- * php5-gd
- * php5-pgsql
+      * php5-gd
+      * php5-pgsql
  * Servidor Web Apache 
  * PostgreSQL 8.3 ou superior
  
-##3.3 Passo-a-passo da Instalação no Sistema Operacional Linux
+##4 - Passo-a-passo da Instalação no Sistema Operacional Linux
 
-##Instalando Apache, PHP5 e PostgreSQL
+##4.1 - Instalando Apache, PHP5 e PostgreSQL
 
 $ apt-get install apache2
 $ apt-get install postgresql-8.4
 $ apt-get install php5 libapache2-mod-php5 php5-gd php5-pgsql
  
-Download do software
+##4.2 - Download do software
 
 Faça o download dos arquivos do sistema antes de prosseguir. A versão atual, 1.0, está disponível em pacotes ZIP e GZip. Descompacte o pacote de sua preferência no diretório raiz do seu servidor web Apache (no Debian, geralmente o diretório raiz é /var/www). 
 
 	$ cd /var/www
-      $ unzip /caminho/cau-1.0.zip
+        $ unzip /caminho/cau-1.0.zip
 	$ mv cau-1.0  sisgestaoti
-Criação do Banco de Dados
+	
+##4.3 - Criação do Banco de Dados
+
 Crie o banco de dados ao qual o CAU usará para armazenar todos os dados digitados através da interface web. Os passos descritos nessa seção irão criar: 
 
-Um usuário gestaoti no servidor PostgreSQL com a senha de acesso 'gestaoti'; 
-Um banco de dados gestaoti. 
-Observação: você pode usar o nome de usuário, banco de dados e senha que desejar. Esses são apenas nomes padrões que a aplicação usa para conectar-se ao banco. 
+Um usuário <b>gestaoti</b> no servidor PostgreSQL com a senha de acesso <b>'gestaoti'</b>; 
+Um banco de dados <b>gestaoti</b>. 
+<b>Observação:</b> você pode usar o nome de usuário, banco de dados e senha que desejar. Esses são apenas nomes padrões que a aplicação usa para conectar-se ao banco. 
 Faça login no servidor de banco de dados PostgreSQL com o cliente psql: 
 	$ su
 	# su - postgres
@@ -116,8 +118,9 @@ Execute o arquivo script_gestaoti.sql que vem no cau. O diretório em que esse a
 
 	$ sudo -u postgres psql -d gestaoti -f /var/www/sisgestaoti/install/script_gestaoti.sql
 
-Edite o arquivo de configuração e conceda permissões de escrita
-O CAU armazena algumas configurações necessárias para a aplicação em um arquivo chamado gestaoti_configs.inc.php (em /var/www/sisgestaoti/gestaoti/), que possui uma sintaxe bem simples de entender. Caso tenha criado o banco de dados, nome de usuário ou senha com um valor diferente de gestaoti, basta editar esse arquivo para que corresponda as suas escolhas: 
+<b><i>Edite o arquivo de configuração e conceda permissões de escrita</i></b>
+
+O CAU armazena algumas configurações necessárias para a aplicação em um arquivo chamado <b>gestaoti_configs.inc.php</b> (em <i>/var/www/sisgestaoti/gestaoti/</i>), que possui uma sintaxe bem simples de entender. Caso tenha criado o banco de dados, nome de usuário ou senha com um valor diferente de <b>gestaoti</b>, basta editar esse arquivo para que corresponda as suas escolhas: 
 
 	$gestaoti_settings['db_postgres_host']='localhost'; 
 	$gestaoti_settings['db_postgres_port']='5432'; 
@@ -130,22 +133,27 @@ Depois, conceda permissões de escrita no diretório cau/anexos. Uma forma prát
 
 	# chmod -R 775 /var/www/sisgestaoti/cau/anexos
 	# chown -R www-data.www-data /var/www/sisgestaoti/
-Observação: www-data é o nome do grupo Apache padrão em sistemas Debian. Em outros sistemas, esse nome pode ser httpd, apache ou _www. Substitua de acordo com o usado em seu sistema operacional. 
-Edite o arquivo de configuração da biblioteca JpGraph
-Configure o diretório onde estão instaladas as fontes. Edite o arquivo jpg-config.inc.php em /var/www/sisgestaoti/gestaoti/include/PHP/class. Por padrão o sistema CAU utiliza a fonte arial.ttf basta incluí-la no diretório abaixo (no caso para sistemas Debian). Esta fonte está incluída no pacote ttf-mscorefonts-installer da distribuição Debian Lenny.
+
+<b>Observação:</b> www-data é o nome do grupo Apache padrão em sistemas Debian. Em outros sistemas, esse nome pode ser httpd, apache ou _www. Substitua de acordo com o usado em seu sistema operacional. 
+
+<b><i>Edite o arquivo de configuração da biblioteca JpGraph</i></b>
+
+Configure o diretório onde estão instaladas as fontes. Edite o arquivo <b>jpg-config.inc.php</b> em <i>/var/www/sisgestaoti/gestaoti/include/PHP/class</i>. Por padrão o sistema CAU utiliza a fonte arial.ttf basta incluí-la no diretório abaixo (no caso para sistemas Debian). Esta fonte está incluída no pacote ttf-mscorefonts-installer da distribuição Debian Lenny.
 	DEFINE("TTF_DIR","/usr/X11R6/lib/X11/fonts/truetype/");
-Configurando o PHP
-Edite o arquivo php.ini da seguinte forma: 
+	
+##4.4 - Configurando o PHP
+
+Edite o arquivo <b><i>php.ini</i></b> da seguinte forma: 
 
 register_globals: altere para On
 	register_globals = on
 
 
 
-Para instalações nos sistemas operacionais windows* os usuários reportaram  também a necessidade de alterar a diretira short_open_tag, mudar de “Off” para:
+Para instalações nos sistemas operacionais windows* os usuários reportaram  também a necessidade de alterar a direita <i>short_open_tag</i>, mudar de “Off” para:
 	short_open_tag = on
 
-Observação: a localização do arquivo php.ini é diferente entre os sistemas operacionais. No Debian/Ubuntu, o padrão é /etc/php5/apache2/php.ini. 
+<b>Observação:</b> a localização do arquivo php.ini é diferente entre os sistemas operacionais. No Debian/Ubuntu, o padrão é /etc/php5/apache2/php.ini. 
 Após qualquer alteração no arquivo php.ini, reinicie seu servidor web: 
 	# /etc/init.d/apache2 restart
 Configuração do Servidor Web – (Passo Opcional)
