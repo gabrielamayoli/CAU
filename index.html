@@ -78,50 +78,41 @@ Direitos que outras pessoas podem ter sobre a obra ou sobre a utilização da ob
 
 <ul>
 <li>
-<p>Gestão de Ativos de TI</p>
+<p>Gestão de Ativos de TI - Sistemas de Informação;</p>
 
 <ul>
-<li>Sistemas de Informação;</li>
 <li>Servidores;</li>
 <li>Patrimônio;</li>
 <li>Análise de impacto (Gestão de Configuração);</li>
 </ul>
 </li>
 <li>
-<p>Gestão de Profissionais de TI e Clientes</p>
+<p>Gestão de Profissionais de TI e Clientes - Cadastro dos profissionais de TI;</p>
 
 <ul>
-<li>Cadastro dos profissionais de TI;</li>
 <li>Cadastro de equipes;</li>
 <li>Time sheet;
 -Cadastro dos clientes;</li>
 </ul>
 </li>
 <li>
-<p>Gestão de Chamados a TI </p>
+<p>Gestão de Chamados a TI - Gestão de requisições de serviço;</p>
 
 <ul>
-<li>Gestão de requisições de serviço;</li>
 <li>Gestão de incidentes;</li>
 <li>Gestão de problemas;</li>
 <li>Gestão de níveis de serviços;</li>
 </ul>
 </li>
-<li>
-<p>Gestão de Mudanças</p>
-
-<ul>
-<li>Relatórios de Apoio a Decisão;</li>
-</ul>
-</li>
+<li><p>Gestão de Mudanças - Relatórios de Apoio a Decisão;</p></li>
 </ul><h2>
 <a name="3---instala%C3%A7%C3%A3o-do-sistema" class="anchor" href="#3---instala%C3%A7%C3%A3o-do-sistema"><span class="octicon octicon-link"></span></a>3 - Instalação do Sistema</h2>
 
 <h2>
 <a name="31---requisitos-gerais-para-instala%C3%A7%C3%A3o" class="anchor" href="#31---requisitos-gerais-para-instala%C3%A7%C3%A3o"><span class="octicon octicon-link"></span></a>3.1 - Requisitos gerais para instalação</h2>
 
-<p>Sugerimos que este guia seja executado por um usuário com experiência em configuração básica de Apache, PHP e PostgreSQL.
-Este roteiro está baseado no Sistema Operacional GNU/Linux Debian Lenny.
+<p>Sugerimos que este guia seja executado por um usuário com experiência em configuração básica de Apache, PHP e PostgreSQL.<br>
+Este roteiro está baseado no Sistema Operacional GNU/Linux Debian Lenny.<br>
 Este manual pressupõe que o servidor de aplicação Web e o banco de dados estarão instalados no mesmo servidor.</p>
 
 <h2>
@@ -134,10 +125,9 @@ Este manual pressupõe que o servidor de aplicação Web e o banco de dados esta
 
 <ul>
 <li>php5-gd</li>
-<li>php5-pgsql</li>
+<li>php5-pgsql * Servidor Web Apache </li>
 </ul>
 </li>
-<li>Servidor Web Apache </li>
 <li>PostgreSQL 8.3 ou superior</li>
 </ul><h2>
 <a name="4---passo-a-passo-da-instala%C3%A7%C3%A3o-no-sistema-operacional-linux" class="anchor" href="#4---passo-a-passo-da-instala%C3%A7%C3%A3o-no-sistema-operacional-linux"><span class="octicon octicon-link"></span></a>4 - Passo-a-passo da Instalação no Sistema Operacional Linux</h2>
@@ -156,7 +146,7 @@ $ apt-get install php5 libapache2-mod-php5 php5-gd php5-pgsql
 <p>Faça o download dos arquivos do sistema antes de prosseguir. A versão atual, <a href="http://www.softwarepublico.gov.br/dotlrn/clubs/ieducar/file-storage/index?folder_id=18853558">1.0</a>, está disponível em pacotes ZIP e GZip. Descompacte o pacote de sua preferência no diretório raiz do seu servidor web Apache (no Debian, geralmente o diretório raiz é <i>/var/www</i>). </p>
 
 <pre><code>$ cd /var/www
-    $ unzip /caminho/cau-1.0.zip
+$ unzip /caminho/cau-1.0.zip
 $ mv cau-1.0  sisgestaoti
 </code></pre>
 
@@ -166,8 +156,7 @@ $ mv cau-1.0  sisgestaoti
 <p>Crie o banco de dados ao qual o CAU usará para armazenar todos os dados digitados através da interface web. Os passos descritos nessa seção irão criar: </p>
 
 <p>Um usuário <b>gestaoti</b> no servidor PostgreSQL com a senha de acesso <b>'gestaoti'</b>; 
-Um banco de dados <b>gestaoti</b>. 
-<b>Observação:</b> você pode usar o nome de usuário, banco de dados e senha que desejar. Esses são apenas nomes padrões que a aplicação usa para conectar-se ao banco. 
+Um banco de dados <b>gestaoti</b>.<br><b>Observação:</b> você pode usar o nome de usuário, banco de dados e senha que desejar. Esses são apenas nomes padrões que a aplicação usa para conectar-se ao banco. 
 Faça login no servidor de banco de dados PostgreSQL com o cliente <i>psql</i>: </p>
 
 <pre><code>$ su
@@ -216,12 +205,14 @@ $gestaoti_settings['db_postgres_enconding']='LATIN1';
 # chown -R www-data.www-data /var/www/sisgestaoti/
 </code></pre>
 
-<p><b>Observação:</b> <i>www-data</i> é o nome do grupo Apache padrão em sistemas Debian. Em outros sistemas, esse nome pode ser <i>httpd</i>, apache ou <i>_<a href="http://www">www</a>.</i> Substitua de acordo com o usado em seu sistema operacional. </p>
+<p><b>Observação:</b> <i>www-data</i> é o nome do grupo Apache padrão em sistemas Debian. Em outros sistemas, esse nome pode ser <i>httpd</i>, apache ou <i>_www</i>. Substitua de acordo com o usado em seu sistema operacional. </p>
 
 <p><b><i>Edite o arquivo de configuração da biblioteca JpGraph</i></b></p>
 
-<p>Configure o diretório onde estão instaladas as fontes. Edite o arquivo <b>jpg-config.inc.php</b> em <i>/var/www/sisgestaoti/gestaoti/include/PHP/class</i>. Por padrão o sistema CAU utiliza a fonte <i>arial.ttf</i> basta incluí-la no diretório abaixo (no caso para sistemas Debian). Esta fonte está incluída no pacote <i>ttf-mscorefonts-installer</i> da distribuição Debian Lenny.
-    DEFINE("TTF_DIR","/usr/X11R6/lib/X11/fonts/truetype/");</p>
+<p>Configure o diretório onde estão instaladas as fontes. Edite o arquivo <b>jpg-config.inc.php</b> em <i>/var/www/sisgestaoti/gestaoti/include/PHP/class</i>. Por padrão o sistema CAU utiliza a fonte <i>arial.ttf</i> basta incluí-la no diretório abaixo (no caso para sistemas Debian). Esta fonte está incluída no pacote <i>ttf-mscorefonts-installer</i> da distribuição Debian Lenny.</p>
+
+<pre><code>DEFINE("TTF_DIR","/usr/X11R6/lib/X11/fonts/truetype/");
+</code></pre>
 
 <h2>
 <a name="44---configurando-o-php" class="anchor" href="#44---configurando-o-php"><span class="octicon octicon-link"></span></a>4.4 - Configurando o PHP</h2>
