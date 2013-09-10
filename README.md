@@ -33,6 +33,19 @@ O código fonte (que é livre e aberto) está disponível para ser baixado livre
 
 O sistema possui várias funcionalidades entre as quais destacam-se: 
 
+ * PHP 5.x
+      * php5-gd
+      * php5-pgsql
+ * Servidor Web Apache 
+ * PostgreSQL 8.3 ou superior
+
+ * PHP 5.x
+      * php5-gd
+      * php5-pgsql
+ * Servidor Web Apache 
+ * PostgreSQL 8.3 ou superior
+ 
+
  * Gestão de Ativos de TI
   * Sistemas de Informação;
   * Servidores;
