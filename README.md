@@ -40,19 +40,19 @@ O sistema possui várias funcionalidades entre as quais destacam-se:
     * Análise de impacto (Gestão de Configuração);
  
 * Gestão de Profissionais de TI e Clientes
-    *Cadastro dos profissionais de TI;
+    * Cadastro dos profissionais de TI;
     * Cadastro de equipes;
     * Time sheet;
-    *Cadastro dos clientes;
+    * Cadastro dos clientes;
  
 * Gestão de Chamados a TI
-    *Gestão de requisições de serviço;
+    * Gestão de requisições de serviço;
     * Gestão de incidentes;
     * Gestão de problemas;
     * Gestão de níveis de serviços;
  
 * Gestão de Mudanças
-    *Relatórios de Apoio a Decisão;
+    * Relatórios de Apoio a Decisão;
 
 ##3 - Instalação do Sistema
 
