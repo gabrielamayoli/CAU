@@ -56,12 +56,12 @@
 
 <p><img src="https://raw.github.com/gabrielamayoli/CAU/master/imagens/4.png" alt="">   Compartilhamento pela mesma licença — Se você alterar, transformar ou criar em cima desta obra, você poderá distribuir a obra resultante apenas sob a mesma licença, ou sob uma licença similar à presente.</p>
 
-<p>Ficando claro que: <b>Renúncia</b> — Qualquer das condições acima pode ser renunciada se você obtiver permissão do titular dos direitos autorais. 
-<b>Domínio Público</b> — Onde a obra ou qualquer de seus elementos estiver em domínio público sob o direito aplicável, esta condição não é, de maneira alguma, afetada pela licença. 
+<p>Ficando claro que: <b>Renúncia</b> — Qualquer das condições acima pode ser <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/br/deed.pt_BR#">renunciada</a> se você obtiver permissão do titular dos direitos autorais. 
+<b>Domínio Público</b> — Onde a obra ou qualquer de seus elementos estiver em <a href="http://wiki.creativecommons.org/Public_domain">domínio público</a> sob o direito aplicável, esta condição não é, de maneira alguma, afetada pela licença. 
 <b>Outros Direitos</b> — Os seguintes direitos não são, de maneira alguma, afetados pela licença: 
-Limitações e exceções aos direitos autorais ou quaisquer usos livres aplicáveis; 
-Os direitos morais do autor; 
-Direitos que outras pessoas podem ter sobre a obra ou sobre a utilização da obra, tais como direitos de imagem ou privacidade. 
+Limitações e exceções aos direitos autorais ou quaisquer <a href="http://wiki.creativecommons.org/Frequently_Asked_Questions#Do_Creative_Commons_licenses_affect_fair_use.2C_fair_dealing_or_other_exceptions_to_copyright.3F">usos livres</a> aplicáveis; 
+Os <a href="http://wiki.creativecommons.org/Frequently_Asked_Questions#I_don.E2.80.99t_like_the_way_a_person_has_used_my_work_in_a_derivative_work_or_included_it_in_a_collective_work.3B_what_can_I_do.3F">direitos morais</a> do autor; 
+Direitos que outras pessoas podem ter sobre a obra ou sobre a utilização da obra, tais como <a href="http://wiki.creativecommons.org/Frequently_Asked_Questions#When_are_publicity_rights_relevant.3F">direitos de imagem</a> ou privacidade. 
 <b>Aviso</b> — Para qualquer reutilização ou distribuição, você deve deixar claro a terceiros os termos da licença a que se encontra submetida esta obra. A melhor maneira de fazer isso é com um link para esta página. </p>
 
 <h2>
@@ -122,8 +122,7 @@ Direitos que outras pessoas podem ter sobre a obra ou sobre a utilização da ob
 <p>Gestão de Mudanças <br></p>
 
 <ul>
-<li>Relatórios de Apoio a Decisão; <br>
-</li>
+<li>Relatórios de Apoio a Decisão;</li>
 </ul>
 </li>
 </ul><h2>
@@ -144,36 +143,43 @@ Direitos que outras pessoas podem ter sobre a obra ou sobre a utilização da ob
 <p>Os requisitos mínimos de software para a correta instalação do Sistema CAU são:</p>
 
 <ul>
-<li>PHP 5.x</li>
+<li>PHP 5.x
+
+<ul>
 <li>php5-gd</li>
 <li>php5-pgsql</li>
+</ul>
+</li>
 <li>Servidor Web Apache </li>
 <li>PostgreSQL 8.3 ou superior</li>
 </ul><h2>
-<a name="33-passo-a-passo-da-instala%C3%A7%C3%A3o-no-sistema-operacional-linux" class="anchor" href="#33-passo-a-passo-da-instala%C3%A7%C3%A3o-no-sistema-operacional-linux"><span class="octicon octicon-link"></span></a>3.3 Passo-a-passo da Instalação no Sistema Operacional Linux</h2>
+<a name="4---passo-a-passo-da-instala%C3%A7%C3%A3o-no-sistema-operacional-linux" class="anchor" href="#4---passo-a-passo-da-instala%C3%A7%C3%A3o-no-sistema-operacional-linux"><span class="octicon octicon-link"></span></a>4 - Passo-a-passo da Instalação no Sistema Operacional Linux</h2>
 
 <h2>
-<a name="instalando-apache-php5-e-postgresql" class="anchor" href="#instalando-apache-php5-e-postgresql"><span class="octicon octicon-link"></span></a>Instalando Apache, PHP5 e PostgreSQL</h2>
+<a name="41---instalando-apache-php5-e-postgresql" class="anchor" href="#41---instalando-apache-php5-e-postgresql"><span class="octicon octicon-link"></span></a>4.1 - Instalando Apache, PHP5 e PostgreSQL</h2>
 
 <p>$ apt-get install apache2
 $ apt-get install postgresql-8.4
 $ apt-get install php5 libapache2-mod-php5 php5-gd php5-pgsql</p>
 
-<p>Download do software</p>
+<h2>
+<a name="42---download-do-software" class="anchor" href="#42---download-do-software"><span class="octicon octicon-link"></span></a>4.2 - Download do software</h2>
 
 <p>Faça o download dos arquivos do sistema antes de prosseguir. A versão atual, 1.0, está disponível em pacotes ZIP e GZip. Descompacte o pacote de sua preferência no diretório raiz do seu servidor web Apache (no Debian, geralmente o diretório raiz é /var/www). </p>
 
 <pre><code>$ cd /var/www
-  $ unzip /caminho/cau-1.0.zip
+    $ unzip /caminho/cau-1.0.zip
 $ mv cau-1.0  sisgestaoti
 </code></pre>
 
-<p>Criação do Banco de Dados
-Crie o banco de dados ao qual o CAU usará para armazenar todos os dados digitados através da interface web. Os passos descritos nessa seção irão criar: </p>
+<h2>
+<a name="43---cria%C3%A7%C3%A3o-do-banco-de-dados" class="anchor" href="#43---cria%C3%A7%C3%A3o-do-banco-de-dados"><span class="octicon octicon-link"></span></a>4.3 - Criação do Banco de Dados</h2>
 
-<p>Um usuário gestaoti no servidor PostgreSQL com a senha de acesso 'gestaoti'; 
-Um banco de dados gestaoti. 
-Observação: você pode usar o nome de usuário, banco de dados e senha que desejar. Esses são apenas nomes padrões que a aplicação usa para conectar-se ao banco. 
+<p>Crie o banco de dados ao qual o CAU usará para armazenar todos os dados digitados através da interface web. Os passos descritos nessa seção irão criar: </p>
+
+<p>Um usuário <b>gestaoti</b> no servidor PostgreSQL com a senha de acesso <b>'gestaoti'</b>; 
+Um banco de dados <b>gestaoti</b>. 
+<b>Observação:</b> você pode usar o nome de usuário, banco de dados e senha que desejar. Esses são apenas nomes padrões que a aplicação usa para conectar-se ao banco. 
 Faça login no servidor de banco de dados PostgreSQL com o cliente psql: 
     $ su
     # su - postgres
@@ -201,8 +207,9 @@ postgres=# \q
 <pre><code>$ sudo -u postgres psql -d gestaoti -f /var/www/sisgestaoti/install/script_gestaoti.sql
 </code></pre>
 
-<p>Edite o arquivo de configuração e conceda permissões de escrita
-O CAU armazena algumas configurações necessárias para a aplicação em um arquivo chamado gestaoti_configs.inc.php (em /var/www/sisgestaoti/gestaoti/), que possui uma sintaxe bem simples de entender. Caso tenha criado o banco de dados, nome de usuário ou senha com um valor diferente de gestaoti, basta editar esse arquivo para que corresponda as suas escolhas: </p>
+<p><b><i>Edite o arquivo de configuração e conceda permissões de escrita</i></b></p>
+
+<p>O CAU armazena algumas configurações necessárias para a aplicação em um arquivo chamado <b>gestaoti_configs.inc.php</b> (em <i>/var/www/sisgestaoti/gestaoti/</i>), que possui uma sintaxe bem simples de entender. Caso tenha criado o banco de dados, nome de usuário ou senha com um valor diferente de <b>gestaoti</b>, basta editar esse arquivo para que corresponda as suas escolhas: </p>
 
 <pre><code>$gestaoti_settings['db_postgres_host']='localhost'; 
 $gestaoti_settings['db_postgres_port']='5432'; 
@@ -218,20 +225,25 @@ $gestaoti_settings['db_postgres_enconding']='LATIN1';
 # chown -R www-data.www-data /var/www/sisgestaoti/
 </code></pre>
 
-<p>Observação: www-data é o nome do grupo Apache padrão em sistemas Debian. Em outros sistemas, esse nome pode ser httpd, apache ou _<a href="http://www">www</a>. Substitua de acordo com o usado em seu sistema operacional. 
-Edite o arquivo de configuração da biblioteca JpGraph
-Configure o diretório onde estão instaladas as fontes. Edite o arquivo jpg-config.inc.php em /var/www/sisgestaoti/gestaoti/include/PHP/class. Por padrão o sistema CAU utiliza a fonte arial.ttf basta incluí-la no diretório abaixo (no caso para sistemas Debian). Esta fonte está incluída no pacote ttf-mscorefonts-installer da distribuição Debian Lenny.
-    DEFINE("TTF_DIR","/usr/X11R6/lib/X11/fonts/truetype/");
-Configurando o PHP
-Edite o arquivo php.ini da seguinte forma: </p>
+<p><b>Observação:</b> www-data é o nome do grupo Apache padrão em sistemas Debian. Em outros sistemas, esse nome pode ser httpd, apache ou _<a href="http://www">www</a>. Substitua de acordo com o usado em seu sistema operacional. </p>
+
+<p><b><i>Edite o arquivo de configuração da biblioteca JpGraph</i></b></p>
+
+<p>Configure o diretório onde estão instaladas as fontes. Edite o arquivo <b>jpg-config.inc.php</b> em <i>/var/www/sisgestaoti/gestaoti/include/PHP/class</i>. Por padrão o sistema CAU utiliza a fonte arial.ttf basta incluí-la no diretório abaixo (no caso para sistemas Debian). Esta fonte está incluída no pacote ttf-mscorefonts-installer da distribuição Debian Lenny.
+    DEFINE("TTF_DIR","/usr/X11R6/lib/X11/fonts/truetype/");</p>
+
+<h2>
+<a name="44---configurando-o-php" class="anchor" href="#44---configurando-o-php"><span class="octicon octicon-link"></span></a>4.4 - Configurando o PHP</h2>
+
+<p>Edite o arquivo <b><i>php.ini</i></b> da seguinte forma: </p>
 
 <p>register_globals: altere para On
     register_globals = on</p>
 
-<p>Para instalações nos sistemas operacionais windows* os usuários reportaram  também a necessidade de alterar a diretira short_open_tag, mudar de “Off” para:
+<p>Para instalações nos sistemas operacionais windows* os usuários reportaram  também a necessidade de alterar a direita <i>short_open_tag</i>, mudar de “Off” para:
     short_open_tag = on</p>
 
-<p>Observação: a localização do arquivo php.ini é diferente entre os sistemas operacionais. No Debian/Ubuntu, o padrão é /etc/php5/apache2/php.ini. 
+<p><b>Observação:</b> a localização do arquivo php.ini é diferente entre os sistemas operacionais. No Debian/Ubuntu, o padrão é /etc/php5/apache2/php.ini. 
 Após qualquer alteração no arquivo php.ini, reinicie seu servidor web: 
     # /etc/init.d/apache2 restart
 Configuração do Servidor Web – (Passo Opcional)
