@@ -33,26 +33,26 @@ O código fonte (que é livre e aberto) está disponível para ser baixado livre
 
 O sistema possui várias funcionalidades entre as quais destacam-se: 
 
-* Gestão de Ativos de TI
-      * Sistemas de Informação;
-      * Servidores;
-      * Patrimônio;
-      * Análise de impacto (Gestão de Configuração);
+ * Gestão de Ativos de TI
+  * Sistemas de Informação;
+  * Servidores;
+  * Patrimônio;
+  * Análise de impacto (Gestão de Configuração);
  
-* Gestão de Profissionais de TI e Clientes
-      * Cadastro dos profissionais de TI;
-      * Cadastro de equipes;
-      * Time sheet;
-      * Cadastro dos clientes;
+ * Gestão de Profissionais de TI e Clientes
+  * Cadastro dos profissionais de TI;
+  * Cadastro de equipes;
+  * Time sheet;
+  * Cadastro dos clientes;
  
-* Gestão de Chamados a TI
-      * Gestão de requisições de serviço;
-      * Gestão de incidentes;
-      * Gestão de problemas;
-      * Gestão de níveis de serviços;
- 
-* Gestão de Mudanças
-      * Relatórios de Apoio a Decisão;
+ * Gestão de Chamados a TI
+   * Gestão de requisições de serviço;
+   * Gestão de incidentes;
+   * Gestão de problemas;
+   * Gestão de níveis de serviços;
+  
+ * Gestão de Mudanças
+   * Relatórios de Apoio a Decisão;
 
 ##3 - Instalação do Sistema
 
@@ -89,9 +89,11 @@ Faça o download dos arquivos do sistema antes de prosseguir. A versão atual, [
 	
 ##4.3 - Criação do Banco de Dados
 
-Crie o banco de dados ao qual o CAU usará para armazenar todos os dados digitados através da interface web. Os passos descritos nessa seção irão criar:<br>
+Crie o banco de dados ao qual o CAU usará para armazenar todos os dados digitados através da interface web. Os passos descritos nessa seção irão criar:
+   
    *Um usuário <b>gestaoti</b> no servidor PostgreSQL com a senha de acesso <b>'gestaoti'</b>; 
-   *Um banco de dados <b>gestaoti</b>.<br>
+   *Um banco de dados <b>gestaoti</b>.
+   
 <b>Observação:</b> você pode usar o nome de usuário, banco de dados e senha que desejar. Esses são apenas nomes padrões que a aplicação usa para conectar-se ao banco. 
 Faça login no servidor de banco de dados PostgreSQL com o cliente <i>psql</i>: 
 
